@@ -26,18 +26,37 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     
-    "RedsXDD/neopywal.nvim",
-    name = "neopywal",
-    lazy = false,
-    priority = 1000,
-    opts = {},
+	'nvim-treesitter/nvim-treesitter',
+	lazy = false,
+	build = ':TSUpdate',
 
-    'nvim-telescope/telescope.nvim', tag = '*',
-    dependencies = {
-        'nvim-lua/plenary.nvim',
-        -- optional but recommended
-        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-    }
+	"RedsXDD/neopywal.nvim",
+	name = "neopywal",
+	lazy = false,
+	priority = 1000,
+	opts = {},
+
+	'm4xshen/autoclose.nvim',
+	name = "autoclose",
+
+	'HiPhish/rainbow-delimiters.nvim',
+	name = "rainbow-delimiters",
+
+	'akinsho/toggleterm.nvim',
+	name = "toggleterm",
+
+	'VonHeikemen/lsp-zero.nvim',
+
+	"mason-org/mason.nvim",
+	name = "mason",
+	opts = {},
+
+	'nvim-telescope/telescope.nvim', tag = '*',
+	dependencies = {
+	'nvim-lua/plenary.nvim',
+	-- optional but recommended
+	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+	}
   },
   
     
